@@ -37,6 +37,36 @@ def delete_product(id):
     return render_template("products.html", our_products=our_products)
 
 
+@products.route('/edit_product/', methods=['GET', 'POST'])
+def edit_product():
+    form = ProductForm()
+    if form.validate_on_submit():
+        edit_product = Products.query.filter_by(product_key=form.product_key.data).first()
+        if new_product is None:
+            new_product = Products(product_name=form.product_name.data, product_price=form.product_price.data, product_key=form.product_key.data, product_type=form.product_type.data, product_sale=form.product_sale.data, description=form.product_description.data)
+            db.session.add(new_product)
+            db.session.commit()
+        name = form.product_name.data
+        form.product_name.data = ''
+        form.product_price.data = ''
+        form.product_key.data = ''
+        form.product_type.data = ''
+        form.product_sale.data = ''
+        form.product_description.data = ''
+    title = "hi"
+    return render_template('add_product.html', form=form)
+
+@products.route('/product/<int:id>/delete/', methods=['GET', 'POST'])
+def delete_product(id):
+    print(id)
+    delete_product = Products.query.get_or_404(id)
+    print(delete_product)
+    db.session.delete(delete_product)
+    db.session.commit()
+    our_products = Products.query.all()
+    return render_template("products.html", our_products=our_products)
+
+
 @products.route('/add_product/', methods=['GET', 'POST'])
 def add_products():
     form = ProductForm()
