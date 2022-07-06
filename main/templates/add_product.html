@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="content-section">
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <fieldset class="form-group">
+            <div class="form-group">
+                {{ form.product_name.label(class="form-control-label") }}
+                {{ form.product_name(class="form-control form-control-lg") }}
+            </div>
+            <div class="form-group">
+                {{ form.product_price.label(class="form-control-label") }}
+                {{ form.product_price(class="form-control form-control-lg") }}
+            </div>
+            <div class="form-group">
+                {{ form.product_key.label(class="form-control-label") }}
+                {{ form.product_key(class="form-control form-control-lg") }}
+            </div>
+            <div class="form-group">
+                {{ form.product_type.label(class="form-control-label") }}
+                {{ form.product_type(class="form-control form-control-lg") }}
+            </div>
+            <div class="form-group">
+                {{ form.product_sale.label(class="form-control-label") }}
+                {{ form.product_sale(class="form-control form-control-lg") }}
+            </div>
+            <div class="form-group">
+                {{ form.product_description.label(class="form-control-label") }}
+                {{ form.product_description(class="form-control form-control-lg") }}
+            </div>
+        </fieldset>
+        <div class="form-group">
+            {{ form.submit(class="btn btn-outline-primary") }}
+        </div>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,78 @@
+<nav class="navbar navbar-expand-lg" style="background-color: #20f019;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{{ url_for('products.all_products') }}">Dükanlar<br/>.com</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav nav-pills">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Azyk harytlary</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="{{ url_for('products.azyk_haryt') }}">Bakja önümleri</a>
+              <a class="dropdown-item" href="{{ url_for('products.azyk_haryt') }}">Gury ir-imişler</a>
+              <a class="dropdown-item" href="{{ url_for('products.azyk_haryt') }}">Et dünyäsi</a>
+              <a class="dropdown-item" href="{{ url_for('products.azyk_haryt') }}">Yaglar, yumurtga</a>
+              <a class="dropdown-item" href="{{ url_for('products.azyk_haryt') }}">Nahar goşundylary</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Arassaçylyk serişdeler</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="{{ url_for('products.yuwunmak_ucin') }}">Diş saglygy</a>
+              <a class="dropdown-item" href="{{ url_for('products.yuwunmak_ucin') }}">Yuwunulýan serişdeler</a>
+              <a class="dropdown-item" href="{{ url_for('products.yuwunmak_ucin') }}">Gap-gaç serişdeler</a>
+              <a class="dropdown-item" href="{{ url_for('products.yuwunmak_ucin') }}">Yuwujy serişdeler</a>
+              <a class="dropdown-item" href="{{ url_for('products.yuwunmak_ucin') }}">Hajathana serişdeler</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Hojalyk harytlary</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Diş saglygy</a>
+              <a class="dropdown-item" href="#">Yuwunulýan serişdeler</a>
+              <a class="dropdown-item" href="#">Gap-gaç serişdeler</a>
+              <a class="dropdown-item" href="#">Yuwujy serişdeler</a>
+              <a class="dropdown-item" href="#">Hajathana serişdeler</a>
+            </div>
+          </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Bezeg harytlary</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Bakja önümleri</a>
+              <a class="dropdown-item" href="#">Gury ir-imişler</a>
+              <a class="dropdown-item" href="#">Et dünyäsi</a>
+              <a class="dropdown-item" href="#">Yaglar, yumurtga</a>
+              <a class="dropdown-item" href="#">Nahar goşundylary</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Eşikler</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Erkek eşikler</a>
+              <a class="dropdown-item" href="#">Aýal eşikler</a>
+              <a class="dropdown-item" href="#">Çaga eşikler</a>
+              <a class="dropdown-item" href="#">Köwüşler</a>
+              <a class="dropdown-item" href="#">Gyş eşikler</a>
+            </div>
+          </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sowgatlyklar</a>
+            </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('products.electronics_tel') }}">Elektronika</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Arassaçylyk serişdeler</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('products.add_products') }}">Haryt goshmak</a>
+          </li>
+        </ul>
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
